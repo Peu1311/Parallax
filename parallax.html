@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+
+    <style>
+        
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        .parallax#par1{
+            background-image: url(img1.jpg);
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            min-height: 100vh;
+            width: 100%;
+        }
+        .parallax#par2{
+            background-image: url(img2.jpg);
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .mask#par1{
+            -webkit-mask-image: linear-gradient(black, transparent)
+        }
+
+        .mask#par2{
+            -webkit-mask-image: linear-gradient(to top, black, transparent)
+        }
+    </style>
+</head>
+<body>
+    <!--O objetivo é fazer um scroll parallax-->
+    <img class="parallax mask" id="par1"></img>
+
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi modi laboriosam commodi corrupti debitis aut? Vitae quas sunt quaerat quis maxime, adipisci aperiam itaque, deleniti animi magni veniam, fuga sapiente.</section>
+
+    <img class="parallax mask" id="par2"></img>
+</body>
+</html>
